@@ -33,10 +33,15 @@ After this I had concluded that I did not need to do anymore external resources 
 
 ###Question 1:
 
-To start off with question one, I knew that my goal was to get a picture of a campus, label 10 buildings where computers could be and then set it up with App Inventor to display the map onto the device I was using. I started off by getting the picture of a campus given to me in the A452 PDF document and saving it and opening it up in Photoshop, after this I created 10 text labels and labelled each building in numerical order to create the first half of the task.
-After this, I created a new project on App Inventor, separate from the one I used for my research and initial tests, and created a canvas item and parented it to Screen1, from there I changed the Canvas to fill the parent in both the X and Y dimensions. After this, I changed the Background Image to the Map Image thereby completing the task.
+####Planning
 
-To test that his question had been successfully completed I ran the emulator and checked if the campus was visible, here is what my emulator looks like after this task:
+To start off, I knew that my goal was to get a picture of a campus, label 10 buildings where computers could be and then set it up with App Inventor to display the map onto the device I was using. I can do this by creating a canvas item and then changing its background image property to the picture of the campus with the labelled 10 buildings.
+
+> **Source:** http://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas
+
+####Development
+
+I started off by getting the picture of a campus given to me in the A452 PDF document and saving it and opening it up in Photoshop, after this I created 10 text labels and labelled each building in numerical order to create the first half of the task. After this, I created a new project on App Inventor, separate from the one I used for my research and initial tests, and created a canvas item and parented it to Screen1, from there I changed the Canvas to fill the parent in both the X and Y dimensions. After this, I changed the Background Image to the Map Image thereby completing the task. To test that his question had been successfully completed I ran the emulator and checked if the campus was visible, here is what my emulator looks like after this task:
 
 ![Campus Screenshot](https://i.imgsafe.org/4413785.png)
 
