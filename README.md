@@ -41,10 +41,22 @@ To start off, I knew that my goal was to get a picture of a campus, label 10 bui
 
 ####Development
 
-I started off by getting the picture of a campus given to me in the A452 PDF document and saving it and opening it up in Photoshop, after this I created 10 text labels and labelled each building in numerical order to create the first half of the task. After this, I created a new project on App Inventor, separate from the one I used for my research and initial tests, and created a canvas item and parented it to Screen1, from there I changed the Canvas to fill the parent in both the X and Y dimensions. After this, I changed the Background Image to the Map Image thereby completing the task. To test that his question had been successfully completed I ran the emulator and checked if the campus was visible, here is what my emulator looks like after this task:
+I started off by getting the picture of a campus given to me in the A452 PDF document and saving it and opening it up in Photoshop, after this I created 10 text labels and labelled each building in numerical order to create the first half of the task. After this, I created a new project on App Inventor, separate from the one I used for my research and initial tests, and created a canvas item and parented it to Screen1, from there I changed the Canvas to fill the parent in both the X and Y dimensions. After this, I changed the Background Image to the Map Image thereby completing the task. 
+
+####Testing
+
+To test that his question had been successfully completed I ran the emulator and checked if the campus was visible, here is what my emulator looks like after this task:
 
 ![Campus Screenshot](https://i.imgsafe.org/4413785.png)
 
 This screenshot concludes that this stage had been successfully completed.
+
+###Question 2
+
+####Planning
+
+My goal was to create a store of data which will store the number of computers available and display this data specific to each building after being touched or clicked. Originally, I had the idea to use the X and Y components of each building and running an event function so that when the Canvas is touched it will check if the X and Y position touched is within a 15 pixel radius of a building and if so running the code needed for that section. However I concluded that this method would be unefficent to complete and a poor choice, Instead of this method I opted into using Image Sprites upon each of the buildings displayed on the canvas since I can run event loops on each Image Sprite for when they are touched which solves the key issues of the previous method.
+
+> **Source:** http://ai2.appinventor.mit.edu/reference/components/animation.html#ImageSprite
 
 
