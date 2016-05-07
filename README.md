@@ -228,3 +228,70 @@ Now, I had to test the code I had added to ensure that it successfully works, to
 | 1              | Sound to be played                                         | Sound was played                                               | Yes.                         |
 | 3              | Sound to be played                                         | Sound was Played                                               | Yes.                         |
 | 10             | Sound to not be played, display buildings with free spaces | Sound was not player and buildings with spaces were displayed. | Yes.                         |
+
+After this, I can successfully conclude that I have completeted this question.
+
+###Question 8
+
+The goal of this question is to discuss the issues of the real-world implementation of this as it would require an onliine database and to discuss the issues of using an online database.
+ 
+ **What is an online database?**
+ > An online database is a database accessible from a network, including from the Internet. It differs from a local database, held in an individual computer or its attached storage, such as a CD.
+ 
+ > **Source:** https://en.wikipedia.org/wiki/Online_database 
+ 
+ In real life, An online database is usually used to host data online where it is, for the most part, more secure to be held and additionally allows for than a single user to access the data at a single instance. A good example of where an online database would be used is by the police when enforcing Car Tax and other laws relating to vehicles. A police officer can scan a vehicles license plate and recieve information about the vehicle almost instantaneously by querying the database with the license plate and recieve all information required about the vehicle, this allows them to enforce the law straight away instead of pulling over the driver unnecessarily.
+ 
+ The first clear issue of using an online database is security, firstly the issue of an unauthorised user gaining access to the database, this would allow them to book and unbook rooms at well, this is obviously very detrimental to the success of the app as this would mean that students could not actually use the app for its intended purpose. From wikipedia, I have found multiple methods to maintain data integrity and security, this can be seen here:
+ 
+ > **Source:** http://citeseerx.ist.psu.edu/viewdoc/download;jsessionid=08265121F6FB80D5AF5C2E2FD6B93AF8?doi=10.1.1.192.736&rep=rep1&type=pdf
+ 
+ Two methods stand out to me from that source, SSL connections and SQL Injection Detection. These two methods are important for different reasons. Firstly, SSL connections between the host and the client would that all data is encrypted and therefore the information remains private and secure. Also, SSL connections protects the data from being 'stolen' by 'man in the middle' attacks as it will drop all information if interupted. The second method of protection would be implementing detection of SQL Injection so that outside sources cannot directly inject information into an entry field, implementation of this would ensure that an outisde source cannot inject malicious code into the database which would allow them to dump the database countents to the attack giving them all the contents of the database, This would ensure that data security is ensured.
+ 
+ > **Source:** https://www.digicert.com/ssl.htm, http://thehackernews.com/2014/09/how-to-detect-sql-injection-attacks.html
+ 
+ Whilst on the topic of database security, I must bring up the point around 'Anderson's Rule'.
+ 
+**What is Anderson's rule?**
+> Ross J. Anderson has often said that by their nature large databases will never be free of abuse by breaches of security; if a large system is designed for ease of access it becomes insecure; if made watertight it becomes impossible to use. This is sometimes known as Anderson's Rule
+
+> **Source:** https://en.wikipedia.org/wiki/Database_security 
+
+If Anderson's rule is to be true then a good middle ground must be found between usability and security to ensure integrity of user data but also to ensure that the database is easy to access and does not require large bulky code on the client side just to query and send data. 
+
+Data validation would also need to be present on the database, this is a neccasity because without data validation two user would be able to book the same room at the same time, this would could cause the database to stop and possibly break. A method of database validation would be by recording each attempt to reserve a computer, and only allow the user who sent the request first to reserve the computer and then telling each other client who attempted to book the room that the computer has been taken and to try to book another room.
+
+Now we must talk about how the online database would actually be used. I believe that the best method of communication with an online database would be with SQL, I have several reasons why I believe SQL to be the best choice:
+
+- SQL can execute queries against a database
+- SQL can retrieve data from a database
+- SQL can insert records in a database
+- SQL can update records in a database
+- SQL can delete records from a database
+- SQL can create new databases
+- SQL can create new tables in a database
+- SQL can create stored procedures in a database
+- SQL can create views in a database
+- SQL can set permissions on tables, procedures, and views
+
+All these features are very valuable to us as we will need to execute queries, retrieve data and update records constantly in the application if it were to be used in the real world, for example when the user needs to find out how many computers are free, instead of indexing the local list, they would need to send a query to the database to find out how many people are in computer block x and to display the information, and when they want to reserve a room, insetad of indexing two local lists, the user would need to update records in the database to inform it that the user has booked a room, and to show the in the database. The type of data needing to be stored by the database would be majoritly integer based as only computers available would generally need to be stored, however this could possibly change upon real world implementation as new issues may arise.
+
+###Evaluation
+
+####Justification
+
+Throughout my solution, I have always attempted to use the most efficent and practical methods possible. The tests I have completed have been to test the specific points of each question and overall I am happy with the outcome of my program and this write-up.
+
+####Effects of time-restrains.
+
+Having a strict time restraint throughtout the coursework has been quite a stressfull for me, as I usually like to take my time with things like this to ensure that I get all information required for each question, I went through some parts of developing the solution where I wanted to go back and re-start the whole process however due to the time restrictions this was not possible to do.
+
+####Code Optimisation
+
+In hindsight, I can see one specific area where I could improve my code which would be with the use of c_Booked and c_BookedRoom as they both are restricitve to each other, for example my code will only allow one room to be booked at a single instance so the use of c_Booked is unjustified and unnecessary, if I had the required time, I would go back and remove these parts.
+
+####Overall feelings about the project.
+
+At first I was not very happy at using App inventor as in my own personal opinion I felt like this was a step-down in comparison to my ususual standard and some concepts seemed absurd to me, however as I went through the project, these concepts became more and more familiar to me and has got me to the point that I am at now where I believe that I completley understand all of the blocks and concepts inside App Inventor and could use them if asked too. My solution has been wrote to be the most efficent and pratical possible, which I beleive I have achieved, I have stored all data in table instead of individual variables to keep the code clean and have used procuedures where possible to yet again, minimise repeated code. In conclusion, I believe my App is easy to use, as proven by my testing tables and bug-free to use and would be very usefull if ever put into a real life situation, this has all been discussed in Question 8. This coursework has taught me methods of picking up alternative programming languages from that I am used to and overall I have found doing this coursework helpfull.
+
+
