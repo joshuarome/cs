@@ -77,7 +77,7 @@ Here is what my emulator looked like:
 
 For this segment, I needed to test that the code was working correctly and when each building is clicked the current ammount of available computers is displayed by the text label, here is a test table to show the results I recieved when testing each button:
 
-| Button Clicked |                   Expected Outcome                  |                    Actual Outcome                   | Did it function as aspected? |
+| Button Clicked |                   Expected Outcome                  |                    Actual Outcome                   | Did it function as expected? |
 |----------------|:---------------------------------------------------:|:---------------------------------------------------:|------------------------------|
 | 1              | "There are 19 computers available in this building" | "There are 19 computers available in this building" | Yes.                         |
 | 2              | "There are 18 computers available in this building" | "There are 18computers available in this building"  | Yes.                         |
