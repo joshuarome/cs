@@ -156,19 +156,46 @@ From these results, I can conclude that I have successfully finish this question
 
 ####Planning
 
-This questions requires me to create a feature which will display seach computer avalible when a user touches a building that has no spaces left. To do this, I had several ideas like placing a marker above each building however I stuck with the most logical and easiest method of changing a text label to inform the user which buildings are avalible so for example, this text label would change to "There are no computers avalible here, try: "C1,C2,C3,C4,C5,C6,C7" and so on. The only new aspect of App Inventor which I needed to use for this was a local variable and a for each item in list both which I found how to use via the App Inventor documentation which can be seen below.
+This questions requires me to create a feature which will display which computers available when a user touches a building that has no spaces left. To do this, I had several ideas like placing a marker above each building however I stuck with the most logical and easiest method of changing a text label to inform the user which buildings are available so for example, this text label would change to "There are no computers available here, try: "C1,C2,C3,C4,C5,C6,C7" and so on. The only new aspect of App Inventor which I needed to use for this was a local variable and a for each item in list both which I found how to use via the App Inventor documentation which can be seen below.
 
 > **Source(s):** http://appinventor.mit.edu/explore/ai2/support/blocks/control.html#foreach , http://appinventor.mit.edu/explore/ai2/support/blocks/variables.html#do
 
 ####Development
 
-I started off the development with creating yet another new Procedure called "empty", inside here I declare a local variable called n with the integer value of 1. I then loop through each Item in the c_Rooms list using the for each n in list block stated in the planning stage, I then get an if statement alongisde a math block to find out if n (the item in the list at this point) is greater than 1 and if so, it will set Label2 to itself plus "C" plus n. After this I will increase the value of n by one. I will do this for each loop of the for each in list, this will make sure that the text label will only tell the user which computer rooms are available so that the user will be correctly informed. 
+I started off the development with creating yet another new Procedure called "empty", inside here I declare a local variable called n with the integer value of 1. I then loop through each Item in the c_Rooms list using the for each n in list block stated in the planning stage, I then get an if statement alongside a math block to find out if n (the item in the list at this point) is greater than 1 and if so, it will set Label2 to itself plus "C" plus n. After this I will increase the value of n by one. I will do this for each loop of the for each in list, this will make sure that the text label will only tell the user which computer rooms are available so that the user will be correctly informed. 
 
-Now all I needed to do was add the prodecure call to an event, since it only needed to be called when there was no space in the room being booked, I decided to append this to the Reserve_Button first else statement where it tells the user that there are no computers spare. I changed the code so that it will instead tell the user:
+Now all I needed to do was add the procedure call to an event, since it only needed to be called when there was no space in the room being booked, I decided to append this to the Reserve_Button first else statement where it tells the user that there are no computers spare. I changed the code so that it will instead tell the user:
 
 > "There are not any computers spare here - Below you can see where computers are available."
 
-And then I call the empty procedure, this can be seen here:
+And then I call the empty procedure, this can be seen here followed by the code I had created for this segment:
 
 ![](https://i.imgsafe.org/bb2b57f.png)
+
+![](https://i.imgsafe.org/1f7f74c.png)
+
+####Testing
+
+I now had to test if the code I had created for this segment has function correctly and if the new text label was in fact displaying the buildings that are available, for this I manually edited the c_Rooms list so that I could properly test if this worked, below is my testing table.
+
+| Button Clicked | Data edited                                                              | Expected Outcome                   | Actual Outcome               | Did it function as expected? |
+|----------------|---------------------------------------------------------------------------|------------------------------------|------------------------------|------------------------------|
+| 10             | None.                                                                     | "C1,C2,C3,C4,C5,C6,C7,C8,C9"       | "C1,C2,C3,C4,C5,C6,C7,C8,C9" | Yes.                         |
+| 2              | None.                                                                     | For the procedure to not be called | Procedure was not called.    | Yes.                         |
+| 6              | I changed c_Rooms 1 and 5 to 0                                            | "C2,C3,C4,C6,C7,C8,C9"             | "C2,C3,C4,C6,C7,C8,C9"       | Yes.                         |
+| 4              | Changed all of c_Rooms to 0 except c_Rooms 7, which maintained same value | "C7"                               | "C7"                         | Yes.                         |
+
+After I received these results, I yet again concluded that I have successfully completed this task and I reset all data augmented by this stage to its original values to maintain consistency throughout development/testing.
+
+###Question 5
+
+####Evaluation of progress so far.
+
+As of this point, I have completed task 1 through 4 and my application is fully functioning and has no bugs what I can find, I believe that the app would be a relatively useful addition to a member of a university as I personally believe that the application carries many benefits for the user, especially from the standpoint of a student in a university. For example, it will allow the student to see which computer rooms are actually open and have available spaces, this factor in itself will free students of time wasted walking around from building to building attempting to find an computer room with available spaces. Also the feature of allowing the student to book a space in the computer room also removes the risk that the student checks the application, goes to the building just to find that in fact there are not any free spaces available and the student would of wasted their time walking over, which clearly is not good.
+
+Overall, I believe that as of this point, the application would heavily benefit a student as it would allow the student to efficiently use their time to the utmost possible in regards to wasting time traveling around from building to building in an attempt to complete tasks which the user needs a computer to complete.
+
+###Question 6
+
+
 
