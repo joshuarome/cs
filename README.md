@@ -195,7 +195,36 @@ As of this point, I have completed task 1 through 4 and my application is fully 
 
 Overall, I believe that as of this point, the application would heavily benefit a student as it would allow the student to efficiently use their time to the utmost possible in regards to wasting time traveling around from building to building in an attempt to complete tasks which the user needs a computer to complete.
 
+
 ###Question 6
 
+To complete this question, I need to describe a usefull additional feature to implement to my exisitng application. I had several ideas for this segment, like disabling the reserve/cancel button for each room depending on if they have already booked a room. However, I ended up deciding that implementing a sound that will play when you book a room to be a better implementation, my reasoning behind this is that the sound can act as a confirmation to the user so that they can know without a doubt that the app has processed there request and that the room is booked, ready and waiting for them.
 
 
+###Question 7
+
+####Planning
+
+My goal for this question was simple, I had to work on the idea stated in the latter question and implement it into my application. I started off by browsing through youtube to find a suitable sound to play to the user when they had booked the room, after searching for around 10 minutes, I had decided on a sound entilted "Fast Swish" as I believe the sound to be loud, clear and not irritating, three features which I personally believe to be a necessity to a sound for this purpose. The sound can be seen here: 
+
+> https://www.youtube.com/watch?v=OUXFL1twa90
+
+Now my goal was to convert and download this sound to an MP3 sound to allow it to be implemented into the application, after googling for a 'Youtube to MP3 converter', I decided to use a site called "clipconverter.cc" for its simple UI and fast conversion, so I used the site and downloaded the sound which allowed me to move onto the development stage of this question.
+
+> **Source(s)** https://www.youtube.com/watch?v=OUXFL1twa90 , http://www.clipconverter.cc/
+
+####Development
+
+Inside the App Inventor designer tab, I added a Player Item from the Media tab on the left side of the screen. I then clicked onto the Player item and clicked onto the 'source' property and uploaded the Fast swish sound which I downloaded from the clipconverter website. Now I had to make the sound play when a room is booked, so I went to reserve_button and went into where the actual booking occurs, in here I added a event from the Player item called "start" and added it to the segment in the reserve button where the values of c_Room and c_Booked are changed. The changes I have made can be seen here:
+
+![](https://i.imgsafe.org/9a5264e.png)
+
+####Testing
+
+Now, I had to test the code I had added to ensure that it successfully works, to this, I yet again use another test table, here are my results:
+
+| Button Clicked | Expected Outcome                                           | Actual Outcome                                                 | Did it function as expected? |
+|----------------|------------------------------------------------------------|----------------------------------------------------------------|------------------------------|
+| 1              | Sound to be played                                         | Sound was played                                               | Yes.                         |
+| 3              | Sound to be played                                         | Sound was Played                                               | Yes.                         |
+| 10             | Sound to not be played, display buildings with free spaces | Sound was not player and buildings with spaces were displayed. | Yes.                         |
